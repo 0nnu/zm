@@ -285,17 +285,17 @@ function resumePlayback() {
 
 
 module.exports = {
-  name: 'play',
+  name: 'شغل',
   description: 'Play music from YouTube',
   execute: async (message, args) => {
     const voiceChannel = message.member.voice.channel;
     if (!voiceChannel) {
-      return message.reply('**⚠️ You need to be in a voice channel!**');
+      return message.reply('**⚠️ انت تحتاج تكون داخل روم صوتي**');
     }
 
     const searchQuery = args.join(' ');
     if (!searchQuery) {
-      return message.reply('**▶️ Please provide a search query!**');
+      return message.reply('**▶️ يرحم اهلك اكتب اسم الاغنية او حط رابطها!**');
     }
 
     const connection = joinVoiceChannel({
